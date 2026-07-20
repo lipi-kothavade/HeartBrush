@@ -100,6 +100,15 @@
 }
 .team-member > p:last-child { margin: 0; font-size: .9rem; }
 .team-note { margin: 28px 0 0; color: #718581; font-size: .78rem; }
+.section-copy .founder-signature {
+  margin-top: 24px;
+  color: #c95b72;
+  font: 600 .9rem "DM Sans", sans-serif;
+}
+.goals h2 { color: #f9f3ea; font-size: clamp(2.5rem, 4vw, 4rem); }
+.goals h2 em { color: #f6a58e; }
+.goals-intro { max-width: 520px; margin: 20px auto 0; color: #d6e4dc; }
+.goals .impact-grid { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 760px) {
   .brand-logo { width: 125px; height: 57px; }
   .brand-logo img { width: 125px; height: 57px; transform: none; }
@@ -108,4 +117,6 @@
   .logo-feature .art-note { bottom: 22px; }
   .team { padding: 75px 22px; }
   .team-grid { grid-template-columns: 1fr; }
+  .goals .impact-grid { grid-template-columns: repeat(2, 1fr); }
+  .goals .impact-grid div:nth-child(3) { border-left: 0; }
 }
