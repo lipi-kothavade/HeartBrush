@@ -120,3 +120,266 @@
   .goals .impact-grid { grid-template-columns: repeat(2, 1fr); }
   .goals .impact-grid div:nth-child(3) { border-left: 0; }
 }
+
+/* Airy blue-panel visual system inspired by the supplied reference image. */
+:root {
+  --ink: #102a3b;
+  --rose: #168ab7;
+  --coral: #cfefff;
+  --cream: #ffffff;
+  --sage: #e7f6fc;
+  --line: #b9deeb;
+  --panel: #f1f9fd;
+  --blue: #168ab7;
+  --deep-blue: #075f85;
+  --sky: #dcefff;
+  --periwinkle: #e6e3fb;
+  --lavender: #f1eaff;
+  --violet: #7667ba;
+}
+
+body {
+  background: #ffffff;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+  max-width: 1320px;
+  height: 74px;
+  margin: 8px auto 14px;
+  padding: 0 32px;
+  background: var(--panel);
+  border: 1px solid #e1f0f6;
+  border-radius: 14px;
+}
+
+.brand-logo img { filter: saturate(.78) hue-rotate(145deg); }
+.site-nav a:hover, .text-link:hover { color: var(--blue); }
+.site-nav .nav-cta { border-color: var(--blue); color: var(--deep-blue); }
+
+.hero {
+  max-width: 1320px;
+  min-height: 570px;
+  margin: 0 auto 22px;
+  padding: 82px 8% 48px;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #e0f0f6;
+  border-radius: 14px;
+  background-color: var(--panel);
+  background-image:
+    radial-gradient(circle at 6% 19%, #d3ecfa 0 30px, transparent 31px),
+    radial-gradient(circle at 15% 52%, #ffffff 0 47px, #b9deeb 48px 49px, transparent 50px),
+    radial-gradient(circle at 27% 9%, #ffffff 0 58px, #c5e4ef 59px 60px, transparent 61px),
+    radial-gradient(circle at 70% 14%, #ffffff 0 55px, #c5e4ef 56px 57px, transparent 58px),
+    radial-gradient(circle at 87% 53%, #d3ecfa 0 39px, transparent 40px),
+    radial-gradient(circle at 95% 78%, #ffffff 0 67px, #c5e4ef 68px 69px, transparent 70px),
+    radial-gradient(circle at 42% 93%, #e6e3fb 0 31px, transparent 32px),
+    radial-gradient(circle at 77% 78%, #e8e4ff 0 17px, transparent 18px);
+}
+
+.hero-copy { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+.eyebrow { color: var(--blue); letter-spacing: .18em; }
+.hero h1 { font-family: Arial, Helvetica, sans-serif; font-weight: 800; letter-spacing: -.06em; }
+.hero h1 em, h2 em { color: var(--deep-blue); }
+.lead { max-width: 620px; margin: 24px auto; }
+.hero-actions { justify-content: center; }
+.button-primary { background: var(--blue); }
+.button-primary:hover { background: var(--deep-blue); }
+.button-secondary { border-color: var(--blue); color: var(--deep-blue); }
+.button-secondary:hover { background: var(--deep-blue); }
+
+.hero-art {
+  display: flex;
+  height: auto;
+  min-height: 0;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  justify-content: center;
+  align-items: center;
+}
+.logo-feature::before, .logo-feature::after, .logo-feature .art-note { display: none; }
+.logo-feature img { width: 120px; height: 88px; filter: saturate(.78) hue-rotate(145deg); }
+.logo-tagline { position: static; transform: none; width: auto; margin: 0 0 0 14px; text-align: left; color: var(--deep-blue); }
+.logo-tagline strong { color: var(--blue); }
+
+.intro, .team, .programs, .impact, .volunteer, .partner, .projects, .gallery, .donate, .contact {
+  max-width: 1320px;
+  margin: 22px auto;
+  border: 1px solid #e0f0f6;
+  border-radius: 14px;
+}
+
+.intro { padding: 96px 30px; background: var(--panel); }
+.intro h2, .section-copy h2, .programs h2, .partner h2, .contact h2, .projects h2, .gallery h2, .donate h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  letter-spacing: -.055em;
+}
+
+.section-grid { padding: 96px 8%; background: var(--panel); }
+.about { grid-template-columns: .9fr 1.1fr; }
+.image-card { background: #d9f0fa; border: 1px solid var(--line); }
+.about-art::before { background: #9ed9ed; }
+.about-art::after { color: #f8fdff; }
+.about-art span { color: var(--blue); }
+.tape { background: #c3e5f2; }
+.founder-signature, .section-copy .founder-signature { color: var(--deep-blue); }
+
+.team, .programs, .projects { padding: 90px 8%; background: var(--panel); }
+.section-heading { align-items: center; }
+.section-heading > p { max-width: 390px; }
+.team-member, .team-member.founder {
+  background: #ffffff;
+  border-color: var(--line);
+  border-radius: 12px;
+}
+.team-member:nth-child(2) { background: #f8f7ff; border-color: #d9d4f4; }
+.team-member:nth-child(3) { background: #f4fbff; border-color: #c9e5f2; }
+.member-initials, .founder .member-initials { background: #d6eff9; color: var(--deep-blue); }
+.team-member:nth-child(2) .member-initials { background: #e4defa; color: var(--violet); }
+.team-member:nth-child(3) .member-initials { background: #d6eff9; color: var(--blue); }
+.member-role { color: var(--blue); }
+.team-note, .projects-note { color: #497b91; }
+
+.program-card, .coral, .sage, .lilac {
+  min-height: 360px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.program-card.coral { background: #f2f9ff; border-color: #c5e3f3; }
+.program-card.sage { background: #eef5ff; border-color: #cfdff7; }
+.program-card.lilac { background: #f8f5ff; border-color: #ddd4f3; }
+.program-card.lilac .program-icon, .program-card.lilac a { color: var(--violet); }
+.program-icon, .program-card a { color: var(--blue); }
+.program-card h3 { font-family: "DM Sans", sans-serif; font-weight: 700; }
+
+.impact { padding: 90px 8% 70px; background: linear-gradient(135deg, #e8f7fe 0%, #eef0ff 100%); color: var(--ink); }
+.impact .eyebrow, .impact-note, .goals-intro { color: var(--blue); }
+.goals h2 { color: var(--ink); font-family: Arial, Helvetica, sans-serif; font-weight: 800; }
+.goals h2 em { color: var(--deep-blue); }
+.impact-grid div { border-color: var(--line); }
+.impact strong { color: var(--deep-blue); font-family: Arial, Helvetica, sans-serif; font-weight: 800; }
+
+.volunteer { background: var(--panel); }
+.volunteer-card { background: linear-gradient(135deg, #d7eff9 0%, #ebe5ff 100%); transform: none; border: 1px solid #cbd9ef; border-radius: 14px; }
+.squiggle { color: var(--blue); }
+
+.partner { padding: 94px 8%; background: #e9f7fd; }
+.partner li { border-color: var(--line); }
+.partner li::before { color: var(--blue); }
+
+.gallery { padding: 92px 8%; background: var(--panel); }
+.gallery-tile { border: 1px solid var(--line); background: #ffffff; }
+.gallery-tile span { color: var(--blue); }
+.tile-one { background: #e7f5fd; border-color: #c8e4f2; }
+.tile-two { background: #f0edff; border-color: #dcd4f3; }
+.tile-three { background: #e4f0ff; border-color: #c9ddf4; }
+.tile-four { background: #f6f1ff; border-color: #ddd4f3; }
+.tile-two span, .tile-four span { color: var(--violet); }
+
+.donate, .contact { padding: 94px 8%; background: var(--panel); }
+.donation-card { background: linear-gradient(135deg, #dff2fa 0%, #eee9ff 100%); border: 1px solid #cbd9ef; }
+.donation-options button { border-color: var(--line); background: #ffffff; }
+.donation-options button:hover { color: var(--blue); border-color: var(--blue); }
+.contact-email, .form-status { color: var(--deep-blue); }
+.contact-form input, .contact-form textarea { border-color: #9bcddd; }
+
+footer { max-width: 1320px; padding: 38px 32px; border-top: 0; background: var(--panel); border-radius: 14px 14px 0 0; }
+
+/* Replace the remaining display type with the reference's direct sans-serif style. */
+.brand, .logo-tagline, .art-note, .team-member h3, .program-card h3, .project-row h3,
+.gallery-tile figcaption, .donation-card > p, .volunteer-card p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.team-member h3, .program-card h3, .project-row h3, .gallery-tile figcaption,
+.donation-card > p { font-weight: 700; letter-spacing: -.03em; }
+.volunteer-card p { font-weight: 700; letter-spacing: -.04em; }
+
+/* Use the typewriter accent only for controls and small organizational labels. */
+.eyebrow, .member-role, .project-label, .button, .partner li {
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: .08em;
+}
+.eyebrow, .member-role, .project-label, .button { font-weight: 700; }
+.button { letter-spacing: .01em; }
+
+/* Every interactive text element uses the typewriter accent. */
+a, button, .menu-toggle {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Warm the palette so the space feels caring and welcoming, not clinical. */
+:root {
+  --cream: #fffaf6;
+  --panel: #faf7ff;
+  --sky: #e7f2fb;
+  --periwinkle: #ece8ff;
+  --lavender: #f5ecff;
+  --peach: #ffe4d4;
+  --blush: #fff0e9;
+}
+
+body { background: var(--cream); }
+.site-header { background: linear-gradient(100deg, #fffaf6 0%, #f6f1ff 100%); border-color: #eee1da; }
+.hero {
+  background-color: #f8f4ff;
+  background-image:
+    radial-gradient(circle at 6% 19%, #d9eefa 0 30px, transparent 31px),
+    radial-gradient(circle at 15% 52%, #fffaf6 0 47px, #dccfe6 48px 49px, transparent 50px),
+    radial-gradient(circle at 27% 9%, #fffaf6 0 58px, #e3d7e6 59px 60px, transparent 61px),
+    radial-gradient(circle at 70% 14%, #fffaf6 0 55px, #e5d9ea 56px 57px, transparent 58px),
+    radial-gradient(circle at 87% 53%, #ffe6db 0 39px, transparent 40px),
+    radial-gradient(circle at 95% 78%, #fffaf6 0 67px, #e3d5e6 68px 69px, transparent 70px),
+    radial-gradient(circle at 42% 93%, #e9e3ff 0 31px, transparent 32px),
+    radial-gradient(circle at 77% 78%, #ffe4d4 0 17px, transparent 18px);
+  border-color: #eadce8;
+}
+
+.intro, .team, .programs, .impact, .volunteer, .partner, .projects, .gallery, .donate, .contact {
+  border-color: #eadde6;
+}
+.intro, .team, .programs, .projects, .gallery, .donate, .contact { background: #fcf8ff; }
+.section-grid { background: #fffaf7; }
+.image-card { background: #ffe2d5; border-color: #efcfc7; }
+.about-art::before { background: #dca5bd; }
+.about-art span { color: var(--violet); }
+.tape { background: #f7d9a9; }
+
+.team-member { background: #fffdfa; border-color: #eadde6; }
+.team-member.founder { background: #f4edff; border-color: #ddd1f2; }
+.team-member:nth-child(2) { background: #fff5ef; border-color: #f0d9cf; }
+.team-member:nth-child(3) { background: #f4f2ff; border-color: #ddd7f0; }
+
+.program-card.coral { background: #fff2eb; border-color: #f0d6cc; }
+.program-card.sage { background: #edf4ff; border-color: #d4e1f5; }
+.program-card.lilac { background: #f6efff; border-color: #dfd2f3; }
+.impact { background: linear-gradient(135deg, #fff0e8 0%, #eee8ff 100%); }
+.volunteer { background: #fffaf7; }
+.volunteer-card { background: linear-gradient(135deg, #ffe3d6 0%, #eee6ff 100%); border-color: #ead3df; }
+.partner { background: linear-gradient(120deg, #f4edff 0%, #fdf1eb 100%); }
+.gallery-tile { background: #fffdfa; }
+.tile-one { background: #eaf3ff; }
+.tile-two { background: #f4eaff; }
+.tile-three { background: #fff0e8; }
+.tile-four { background: #f8eefc; }
+.donation-card { background: linear-gradient(135deg, #ffe6da 0%, #eee8ff 100%); border-color: #ead4df; }
+footer { background: linear-gradient(100deg, #fffaf6 0%, #f4efff 100%); }
+
+@media (max-width: 760px) {
+  .site-header { margin: 6px 10px 12px; padding: 0 20px; }
+  .hero, .intro, .team, .programs, .impact, .volunteer, .partner, .projects, .gallery, .donate, .contact { margin: 12px 10px; }
+  .hero { min-height: 500px; padding: 70px 24px 35px; background-image: radial-gradient(circle at 7% 14%, #d3ecfa 0 24px, transparent 25px), radial-gradient(circle at 92% 18%, #ffffff 0 38px, #b9deeb 39px 40px, transparent 41px), radial-gradient(circle at 15% 81%, #ffffff 0 38px, #b9deeb 39px 40px, transparent 41px); }
+  .hero-art { margin-top: 4px; }
+  .logo-feature img { width: 88px; height: 64px; }
+  .logo-tagline { font-size: .76rem; }
+  .section-grid, .team, .programs, .impact, .partner, .projects, .gallery, .donate, .contact { padding: 72px 24px; }
+  .intro { padding: 72px 24px; }
+  .program-card, .coral, .sage, .lilac { min-height: 0; }
+  footer { margin: 12px 10px 0; padding: 28px 24px; }
+}

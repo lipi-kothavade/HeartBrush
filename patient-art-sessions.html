@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about HeartBrush patient art sessions.">
+  <title>Patient Art Sessions | HeartBrush</title>
+  <link rel="stylesheet" href="styles.css?v=20260730">
+  <link rel="stylesheet" href="overrides.css?v=20260730">
+  <style>
+    .program-detail {
+      max-width: 1120px;
+      margin: 22px auto 44px;
+      padding: 78px 9%;
+      border: 1px solid #eadce8;
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 8% 12%, #d9eefa 0 28px, transparent 29px),
+        radial-gradient(circle at 91% 18%, #ffe4d4 0 42px, transparent 43px),
+        linear-gradient(135deg, #f8f4ff 0%, #fff6f0 100%);
+    }
+    .program-detail__intro { max-width: 700px; }
+    .program-detail h1 {
+      margin: 0;
+      color: var(--ink);
+      font: 800 clamp(2.8rem, 7vw, 5.6rem)/.96 Arial, Helvetica, sans-serif;
+      letter-spacing: -.07em;
+    }
+    .program-detail__lead { max-width: 660px; margin: 24px 0 0; font-size: 1.1rem; }
+    .program-detail__sections { display: grid; gap: 18px; margin-top: 56px; }
+    .program-detail__section { padding: 30px 34px; border: 1px solid #e5d6e2; border-radius: 12px; background: rgba(255, 253, 250, .88); }
+    .program-detail__section:nth-child(2) { background: rgba(244, 241, 255, .9); }
+    .program-detail__section:nth-child(3) { background: rgba(255, 241, 233, .9); }
+    .program-detail h2 { margin: 0 0 13px; color: var(--deep-blue); font: 700 1.1rem/1.1 "Courier New", Courier, monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .program-detail__section p { max-width: 800px; margin: 0; font-size: 1.02rem; }
+    .detail-back { margin-top: 42px; }
+    @media (max-width: 760px) {
+      .program-detail { margin: 12px 10px 28px; padding: 58px 24px; }
+      .program-detail__section { padding: 25px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand brand-logo" href="index.html#home" aria-label="HeartBrush home"><img src="assets/heartbrush-logo.png" alt="HeartBrush: Painting Hope one child at a time"></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html#programs">Programs</a>
+      <a class="nav-cta" href="index.html#donate">Donate</a>
+    </nav>
+  </header>
+  <main id="main" class="program-detail">
+    <div class="program-detail__intro">
+      <p class="eyebrow">HEARTBRUSH PROGRAM</p>
+      <h1>Patient art sessions.</h1>
+      <p class="program-detail__lead">A calmer, more positive moment of creativity during a hospital stay.</p>
+    </div>
+    <div class="program-detail__sections">
+      <section class="program-detail__section">
+        <h2>What</h2>
+        <p>At HeartBrush we want to create an environment where patients in hospitals can relax and take a break. We hope to make their stay as comfortable and positive as possible.</p>
+      </section>
+      <section class="program-detail__section">
+        <h2>Why</h2>
+        <p>Patients are in hospitals for physical injuries, and hospitals are designed to treat wounds of the body, but along with that comes emotional pain and mental trauma. These struggles are often not considered by hospitals, and it only serves to make an already difficult time for the patient even worse. Furthermore, many patients also struggle with Post-Hospital Syndrome (PHS) which is a condition in which patients struggle to return to their daily lives after their hospital stays. During this period patients are vulnerable to further complications and it makes their recovery more difficult. This condition is important especially because it affects those who have been through so much, and are already struggling, It is caused by high-stress levels and fatigue, as well as changes to sleep schedules and emotional disturbances. Our goal is to minimize these difficulties. While it can be done in many different ways, our method of choice is art. We want to bring peace to patients through creativity and inspiration, allowing them to momentarily escape from the sterile surroundings of the hospital, allowing them to begin recovering emotionally,</p>
+      </section>
+      <section class="program-detail__section">
+        <h2>How</h2>
+        <p>We plan to bring art projects directly to their bedsides, small activities that don’t require mental effort, and are relaxing. For example, color-by-numbers, scratch-off art, and doodle art. All these projects allow them to distract themselves from their pain, and take a moment for themselves.</p>
+      </section>
+    </div>
+    <p class="detail-back"><a class="button button-secondary" href="index.html">Back to mainpage <span>→</span></a></p>
+  </main>
+</body>
+</html>
