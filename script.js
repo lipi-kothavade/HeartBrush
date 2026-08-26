@@ -13,9 +13,32 @@ nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () =>
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-document.querySelector('.contact-form').addEventListener('submit', (event) => {
+document.querySelector('.contact-form').addEventListener('submit', async (event) => {
   event.preventDefault();
-  event.currentTarget.querySelector('.form-status').textContent =
-    'Thanks for reaching out! This demo form is ready to connect to your email service.';
-  event.currentTarget.reset();
+  const form = event.currentTarget;
+  const status = form.querySelector('.form-status');
+  const button = form.querySelector('button[type="submit"]');
+
+  status.textContent = 'Sending…';
+  button.disabled = true;
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form),
+    });
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok || result.success === 'false' || result.success === false) {
+      throw new Error(result.message || 'Send failed');
+    }
+
+    status.textContent = 'Thanks for reaching out. We’ll get back to you soon.';
+    form.reset();
+  } catch (error) {
+    status.textContent = 'Something went wrong. Please email lipi@heartbrush.org instead.';
+  } finally {
+    button.disabled = false;
+  }
 });
