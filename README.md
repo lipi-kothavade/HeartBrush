@@ -1,6 +1,6 @@
 # HeartBrush
 
-A static landing page for HeartBrush, a nonprofit bringing creative moments to hospital care spaces.
+A static site for HeartBrush, a nonprofit bringing creative moments to hospital care spaces.
 
 ## Run locally
 
@@ -17,17 +17,23 @@ Then visit `http://localhost:8000`.
 ## Project structure
 
 ```text
-index.html       Page content and sections
-styles.css       Base visual design (currently minified)
-overrides.css    Brand and layout refinements
-script.js        Mobile menu, footer year, demo contact form
-assets/          Site images
+index.html                 Home page
+patient-art-sessions.html  Program detail
+care-team-wellness.html    Program detail
+family-involvement.html    Program detail
+project-gallery.html       Example artwork for each project
+styles.css                 Base visual design (currently minified)
+overrides.css              Brand and layout refinements
+script.js                  Mobile menu, footer year, contact form
+assets/                    Logo, founder photo, and project gallery images
 ```
+
+The contact form on the home page submits to FormSubmit.co and emails `lipi@heartbrush.org`.
 
 ## Before publishing
 
-- Replace the two team-member placeholders and gallery tiles with real content.
-- Configure the contact form with an email/form provider.
-- Connect donations to a secure payment platform.
-- Confirm `hello@heartbrush.org` is an active mailbox.
+- Connect donations to a secure payment platform (the donate section currently says “Donations coming soon”).
+- Add real session photos to the home-page Gallery section when they are available (it currently says “Gallery coming soon”).
+- Confirm `lipi@heartbrush.org` is an active mailbox, and complete FormSubmit.co activation from the live domain if needed.
 - Add a favicon, social links, and a production deployment host.
+- Confirm you have rights to use every image in `assets/` before going live.
