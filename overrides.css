@@ -236,11 +236,17 @@ body {
 }
 
 .section-grid { padding: 96px 8%; background: var(--panel); }
-.about { grid-template-columns: .9fr 1.1fr; }
+.about { grid-template-columns: 1fr 1.15fr; gap: clamp(32px, 4vw, 56px); }
 .image-card { background: #d9f0fa; border: 1px solid var(--line); }
-.about-art::before { background: #9ed9ed; }
-.about-art::after { color: #f8fdff; }
-.about-art span { color: var(--blue); }
+.about-art::before, .about-art::after { content: none; }
+.about-art__scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.about-art .tape { top: 20px; }
 .tape { background: #c3e5f2; }
 .founder-signature, .section-copy .founder-signature { color: var(--deep-blue); }
 
@@ -289,13 +295,22 @@ body {
 .partner li::before { color: var(--blue); }
 
 .gallery { padding: 92px 8%; background: var(--panel); }
-.gallery-tile { border: 1px solid var(--line); background: #ffffff; }
-.gallery-tile span { color: var(--blue); }
-.tile-one { background: #e7f5fd; border-color: #c8e4f2; }
-.tile-two { background: #f0edff; border-color: #dcd4f3; }
-.tile-three { background: #e4f0ff; border-color: #c9ddf4; }
-.tile-four { background: #f6f1ff; border-color: #ddd4f3; }
-.tile-two span, .tile-four span { color: var(--violet); }
+.gallery-soon {
+  min-height: 380px;
+  display: grid;
+  place-items: center;
+  padding: 40px 28px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: linear-gradient(135deg, #ffe6da 0%, #eee8ff 100%);
+  text-align: center;
+}
+.gallery-soon p {
+  margin: 0;
+  color: var(--deep-blue);
+  font: 700 clamp(1.35rem, 2.4vw, 1.9rem)/1.2 "Courier New", Courier, monospace;
+  letter-spacing: .06em;
+}
 
 .donate, .contact { padding: 94px 8%; background: var(--panel); }
 .donation-card > .donation-soon {
@@ -384,6 +399,8 @@ body { background: var(--cream); }
 
 .team-member { background: #fffdfa; border-color: #eadde6; }
 .team-member.founder { background: #f4edff; border-color: #ddd1f2; }
+.team-member .member-bio { margin: 0 0 12px; font-size: .9rem; }
+.team-member .member-bio:last-child { margin: 0; }
 .team-grid > .volunteer {
   display: grid;
   grid-template-columns: 1.15fr .85fr;
@@ -500,7 +517,7 @@ html { -webkit-text-size-adjust: 100%; }
   .team-grid > .volunteer h2 { font-size: clamp(1.75rem, 7.6vw, 2.6rem); }
 
   .about, .section-grid { grid-template-columns: 1fr; }
-  .image-card { height: 280px; }
+  .image-card { height: 340px; }
 
   .team-grid > .volunteer { grid-template-columns: 1fr; }
 

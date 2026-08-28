@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Examples of the mandala, doodle, and scratch-off art projects HeartBrush brings into care spaces.">
+  <title>Project Gallery | HeartBrush</title>
+  <link rel="stylesheet" href="styles.css?v=20260824f">
+  <link rel="stylesheet" href="overrides.css?v=20260828d">
+  <style>
+    .project-gallery {
+      max-width: 1120px;
+      margin: 22px auto 44px;
+      padding: 78px 9%;
+      border: 1px solid #eadce8;
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 8% 12%, #d9eefa 0 28px, transparent 29px),
+        radial-gradient(circle at 91% 18%, #ffe4d4 0 42px, transparent 43px),
+        linear-gradient(135deg, #f8f4ff 0%, #fff6f0 100%);
+    }
+    .project-gallery__intro { max-width: 720px; }
+    .project-gallery h1 {
+      margin: 0;
+      color: var(--ink);
+      font: 800 clamp(2.8rem, 7vw, 5.6rem)/.96 Arial, Helvetica, sans-serif;
+      letter-spacing: -.07em;
+    }
+    .project-gallery__lead { max-width: 660px; margin: 24px 0 0; font-size: 1.1rem; }
+    .project-gallery__sections { display: grid; gap: 18px; margin-top: 56px; }
+    .project-gallery__section {
+      padding: 30px 34px;
+      border: 1px solid #e5d6e2;
+      border-radius: 12px;
+      background: rgba(255, 253, 250, .88);
+      scroll-margin-top: 24px;
+    }
+    .project-gallery__section:nth-child(2) { background: rgba(244, 241, 255, .9); }
+    .project-gallery__section:nth-child(3) { background: rgba(255, 241, 233, .9); }
+    .project-gallery__section:nth-child(4) { background: rgba(236, 247, 255, .9); }
+    .project-gallery__label {
+      margin: 0 0 6px;
+      color: var(--blue);
+      font: 700 .7rem/1 "Courier New", Courier, monospace;
+      letter-spacing: .13em;
+    }
+    .project-gallery h2 {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font: 800 clamp(1.6rem, 3.4vw, 2.3rem)/1.08 Arial, Helvetica, sans-serif;
+      letter-spacing: -.045em;
+    }
+    .project-gallery__section > p { max-width: 720px; margin: 0; font-size: 1.02rem; }
+    .art-grid { display: grid; gap: 20px; max-width: 620px; margin: 24px 0 0; }
+    .art-piece { margin: 0; }
+    .art-piece img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #ffffff;
+    }
+    .art-piece figcaption { margin: 9px 0 0; color: #497b91; font-size: .82rem; }
+    .detail-back { margin-top: 42px; }
+    @media (max-width: 760px) {
+      .project-gallery { margin: 12px 10px 28px; padding: 58px 24px; }
+      .project-gallery__section { padding: 25px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand brand-logo" href="index.html#home" aria-label="HeartBrush home"><img src="assets/heartbrush-logo.png?v=2" alt="HeartBrush: Painting Hope one child at a time"></a>
+    <nav class="site-nav site-nav-inline" aria-label="Main navigation">
+      <a href="index.html#projects">Projects</a>
+      <a class="nav-cta" href="index.html#donate">Donate</a>
+    </nav>
+  </header>
+  <main id="main" class="project-gallery">
+    <div class="project-gallery__intro">
+      <p class="eyebrow">PROJECT GALLERY</p>
+      <h1>Color in action.</h1>
+      <p class="project-gallery__lead">Examples of the art projects we bring into care spaces, so patients, families, and care teams know exactly what to expect before they pick up a pen.</p>
+    </div>
+    <div class="project-gallery__sections">
+      <section class="project-gallery__section" id="doodle-distractions">
+        <p class="project-gallery__label">01</p>
+        <h2>Doodle Distractions</h2>
+        <p>Mindless art that allows patients to let go of stress. There is no plan and no wrong answer — just a pen following whatever shape comes next, filling a page one loop at a time.</p>
+        <div class="art-grid">
+          <figure class="art-piece">
+            <img src="assets/art-doodle.png" alt="A black and white doodle of overlapping spirals, rings, and curved shapes filling the whole page">
+            <figcaption>Freehand pen doodle — repeating loops and curves, no sketch or outline.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="project-gallery__section" id="mandala-making">
+        <p class="project-gallery__label">02</p>
+        <h2>Mandala Making</h2>
+        <p>Creative dot art that allows hospital staff to reset. A mandala is built outward from a single point in the center, so it can be picked up and put down between rounds without ever losing the thread.</p>
+        <div class="art-grid">
+          <figure class="art-piece">
+            <img src="assets/art-mandala.png" alt="A mandala drawn in pink, purple, and blue ink, built from concentric rings of dots, petals, and small repeating shapes">
+            <figcaption>Ink mandala — concentric rings of dots and petals worked outward from the center.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="project-gallery__section" id="scratch-off-sessions">
+        <p class="project-gallery__label">03</p>
+        <h2>Scratch-off Sessions</h2>
+        <p>Projects that allow patients to introduce color in a relaxing way. A black coated sheet hides a rainbow underneath, and every line scratched away reveals color — so even the smallest amount of effort produces something bright.</p>
+        <div class="art-grid">
+          <figure class="art-piece">
+            <img src="assets/art-scratch-skyline.png" alt="A city skyline scratched out of a black surface, revealing pink, green, and blue color underneath each building">
+            <figcaption>Scratch-off skyline — buildings revealed line by line from a black coating.</figcaption>
+          </figure>
+          <figure class="art-piece">
+            <img src="assets/art-scratch-blooms.png" alt="Rounded, petal-like shapes scratched from a black surface, revealing soft pink, blue, and purple gradients">
+            <figcaption>Scratch-off blooms — rounded shapes filled with the color hidden beneath.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="project-gallery__section" id="comfort-crafts">
+        <p class="project-gallery__label">04</p>
+        <h2>Comfort Crafts</h2>
+        <p>Small arts and crafts kits we'll provide for families in waiting rooms. Each kit is designed to be finished in a single sitting, with everything needed already inside — no setup, no mess, and nothing to take home but the finished piece.</p>
+        <div class="art-grid">
+          <figure class="art-piece">
+            <img src="assets/art-comfort-kit.jpg" alt="Two canvas zip pouches decorated with iron-on crown, star, and initial patches, shown with fabric markers, tassels, and craft clips">
+            <figcaption>An example kit — a plain pouch, patches, and markers, personalized in one sitting.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+    <p class="detail-back"><a class="button button-secondary" href="index.html#projects">Back to projects <span>→</span></a></p>
+  </main>
+</body>
+</html>
